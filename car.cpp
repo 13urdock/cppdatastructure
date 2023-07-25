@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class Car{
@@ -12,13 +13,14 @@ public:
 	}
 };
 int main(void){
-	Car *santafe = new Car("Santafe", 300);
-	Car *tico = new Car("Tico", 200);
-	Car *grandeur = new Car("Grandeur", 300);
+	vector<Car*> carVector;
+	list<Car*> carList;
 
-	santafe->run(1);
-	tico->run(2);
-	grandeur->run(3);
-
+	carVector.push_back( new Car("Santafe", 300));
+	carVector.push_back( new Car("Tico", 200));
+	carVector.push_back(new Car("Grandeur", 300));
+	for (int i = 0; i < carVector.size(); i++)
+		car->run(1);
+	
 	return 0;
 }
